@@ -1,0 +1,13 @@
+{
+  "name": "secsock",
+  "version": "1.0.0",
+  "description": "Secure sockets",
+  "main": "src/index.js",
+  "author": "Auguste Rame",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "openpgp": "^4.1.0"
+  }
+}
