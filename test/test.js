@@ -16,7 +16,7 @@ var server = new secsock.Server(secure => {
 }, 81);
 
 var client = new secsock.Client(secure => {
-
+	
 	secure.on("json", data => {
 
 		secure.sendFile("test.txt", Buffer.from(data.test_data));

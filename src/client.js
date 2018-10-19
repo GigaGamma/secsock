@@ -9,11 +9,13 @@ const SecureConnection = require("./secure_connection");
 
 /**
  * 
- * @param {SecureConnection} listener 
- * @param {number} port 
- * @param {string} host 
+ * @param {SecsockCallback} listener The callback for when the connection is established
+ * @param {number} port The port of the server
+ * @param {string} host The hostname of the server
+ * 
+ * @class
  */
-function SecsockClient (listener = () => {}, port, host = "0.0.0.0") {
+function SecsockClient (listener = (listener) => {}, port, host = "0.0.0.0") {
 
 	var socket = net.createConnection({
 		port,
@@ -57,3 +59,10 @@ function SecsockClient (listener = () => {}, port, host = "0.0.0.0") {
 }
 
 module.exports = SecsockClient;
+
+/**
+ * @callback SecsockCallback
+ * @param {SecureConnection} secure
+ * @private
+ */
+
